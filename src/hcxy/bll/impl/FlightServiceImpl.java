@@ -1,15 +1,23 @@
-package hcxy.dao.SXL;
+package hcxy.bll.impl;
 
 import hcxy.bean.Flight;
+import hcxy.bll.IFlightService;
 import hcxy.dao.IFlightdao;
+import hcxy.dao.SXL.daoIFlight;
 
 import java.util.Set;
 
-public class daoIFlight implements IFlightdao {
+public class FlightServiceImpl implements IFlightService {
 
-    @Override
+    IFlightdao iFlightdao;
+
+    public FlightServiceImpl() {
+        iFlightdao=new daoIFlight();
+    }
+
     public void insertFlight(Flight flight) {
-        System.out.println("数据到达dao层"+flight);
+        System.out.println("数据从ui到bull层"+flight);
+        iFlightdao.insertFlight(flight);
     }
 
     @Override
@@ -36,4 +44,5 @@ public class daoIFlight implements IFlightdao {
     public void updateFlight(Flight flight) {
 
     }
+
 }
