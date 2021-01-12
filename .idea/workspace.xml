@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0770d181-aa4e-4ab6-9910-991b33b6eed1" name="Default Changelist" comment="" />
+    <list default="true" id="0770d181-aa4e-4ab6-9910-991b33b6eed1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hcxy/dao/SXL/daoIFlight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +15,7 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,6 +59,7 @@
       <updated>1610409604642</updated>
       <workItem from="1610409607742" duration="1992000" />
       <workItem from="1610423799084" duration="727000" />
+      <workItem from="1610433738642" duration="793000" />
     </task>
     <task id="LOCAL-00001" summary="1.修改了了bean层中的Flight类，增加了Seatsno和totalseatsnum&#10;2.创建了dao层的IFlightdao接口">
       <created>1610422980224</created>
@@ -63,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610422980224</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1.修改了了bean层中的Flight类，增加了Seatsno和totalseatsnum&#10;2.创建了dao层的IFlightdao接口">
+      <created>1610433831660</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610433831660</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,18 +86,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="1.修改了了bean层中的Flight类，增加了Seatsno和totalseatsnum&#10;2.创建了dao层的IFlightdao接口" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1610422394443">
+    <state x="605" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1610434648439">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1610422394443" />
-    <state x="275" y="20" key="CommitChangelistDialog2" timestamp="1610422979114">
+    <state x="605" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1610434648439" />
+    <state x="275" y="20" key="CommitChangelistDialog2" timestamp="1610433830753">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="275" y="20" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1610422979114" />
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1610422996820">
+    <state x="275" y="20" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1610433830753" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1610433840004">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1610422996820" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1610433840004" />
     <state x="480" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1610433738533">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
