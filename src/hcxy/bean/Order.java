@@ -1,6 +1,8 @@
+package hcxy.bean;
+
 import java.util.Set;
 
-public class OrderManage {
+public class Order {
     private  String  id;
     private  float TicekType; //票的类型、单价
     private  float airporttax;//机场税

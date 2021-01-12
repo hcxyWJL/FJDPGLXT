@@ -1,10 +1,13 @@
-public class PlaneInformation {
+package hcxy.bean;
+
+public class Flight {
     private String  id;
     private  String planeType;//机型
     private  String startairport; //起飞机场
     private  String arrivalairport;//到达机场
     private  String starTime; //起始时间
-    private  String endTime;   //到达时间
+    private  String seatsno; //座位号
+    private  String FilghtseatsTotal;//总数
 
     public String getId() {
         return id;
@@ -46,11 +49,19 @@ public class PlaneInformation {
         this.starTime = starTime;
     }
 
-    public String getEndTime() {
-        return endTime;
+    public String getSeatsno() {
+        return seatsno;
     }
 
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
+    public void setSeatsno(String seatsno) {
+        this.seatsno = seatsno;
+    }
+
+    public String getFilghtseatsTotal() {
+        return FilghtseatsTotal;
+    }
+
+    public void setFilghtseatsTotal(String filghtseatsTotal) {
+        FilghtseatsTotal = filghtseatsTotal;
     }
 }
