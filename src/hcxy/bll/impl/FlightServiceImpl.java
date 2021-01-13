@@ -5,6 +5,7 @@ import hcxy.bll.IFlightService;
 import hcxy.dao.IFlightdao;
 import hcxy.dao.SXL.daoIFlight;
 
+import java.sql.SQLException;
 import java.util.Set;
 
 public class FlightServiceImpl implements IFlightService {
@@ -15,14 +16,16 @@ public class FlightServiceImpl implements IFlightService {
         iFlightdao=new daoIFlight();
     }
 
-    public void insertFlight(Flight flight) {
-        System.out.println("数据从ui到bull层"+flight);
+    public void insertFlight(Flight flight) throws SQLException {
+
         iFlightdao.insertFlight(flight);
     }
 
     @Override
-    public Set<Flight> getAllFlights() {
-        return null;
+    public Set<Flight> getAllFlights() throws SQLException {
+
+
+        return iFlightdao.getAllFlights();
     }
 
     @Override

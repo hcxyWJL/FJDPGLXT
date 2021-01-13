@@ -1,13 +1,13 @@
 package hcxy.bean;
 
 public class Flight {
-    private String  id;
+    private  String  id;
     private  String flightid;
-    private  String planeType;//鏈哄瀷
-    private  String currentseatsnum;//鎬绘暟
-    private  String startairport; //璧烽鏈哄満
-    private  String arrivalairport;//鍒拌揪鏈哄満
-    private  String starTime; //璧峰鏃堕棿
+    private  String planeType;//机型
+    private  int  currentseatsnum;//总数
+    private  String startairport; //起飞机场
+    private  String arrivalairport;//到达机场
+    private  String starTime; //起始时间
 
 
     public String getId() {
@@ -16,6 +16,14 @@ public class Flight {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getFlightid() {
+        return flightid;
+    }
+
+    public void setFlightid(String flightid) {
+        this.flightid = flightid;
     }
 
     public String getPlaneType() {
@@ -50,16 +58,16 @@ public class Flight {
         this.starTime = starTime;
     }
 
-    public String getCurrentseatsnum() {
+    public int getCurrentseatsnum() {
         return currentseatsnum;
     }
 
-    public void setCurrentseatsnum(String currentseatsnum) {
+    public void setCurrentseatsnum(int currentseatsnum) {
         this.currentseatsnum = currentseatsnum;
     }
 
-    public Flight(String flightid, String planeType, String currentseatsnum, String startairport, String arrivalairport, String starTime) {
-
+    public Flight(String id,String flightid, String planeType, int currentseatsnum, String startairport, String arrivalairport, String starTime) {
+        this.id=id;
         this.flightid = flightid;
         this.planeType = planeType;
         this.currentseatsnum = currentseatsnum;
@@ -70,12 +78,13 @@ public class Flight {
 
     @Override
     public String toString() {
-        return "Flight{" +" flightid='" + flightid + '\'' +
-                ", planeType='" + planeType + '\'' +
-                ", currentseatsnum='" + currentseatsnum + '\'' +
-                ", startairport='" + startairport + '\'' +
-                ", arrivalairport='" + arrivalairport + '\'' +
-                ", starTime='" + starTime + '\'' +
+        return "Flight{" +
+                "航班号='" + flightid + '\'' +
+                ", 机型='" + planeType + '\'' +
+                ", 当前座位数=" + currentseatsnum +
+                ", 起飞机场='" + startairport + '\'' +
+                ", 目的机场='" + arrivalairport + '\'' +
+                ", 起飞时间='" + starTime + '\'' +
                 '}';
     }
 }
