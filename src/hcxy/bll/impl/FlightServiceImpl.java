@@ -24,28 +24,26 @@ public class FlightServiceImpl implements IFlightService {
     @Override
     public Set<Flight> getAllFlights() throws SQLException {
 
-
-        return iFlightdao.getAllFlights();
+        return  iFlightdao.getAllFlights();
     }
 
     @Override
-    public Flight getFlightbystarTime(String starTime) {
-        return null;
+    public Flight getFlightbystarTime(String starTime) throws SQLException {
+        return iFlightdao.getFlightbystarTime(starTime);
     }
 
     @Override
-    public Flight getFlightbystartairport(String startairport) {
-        return null;
+    public Flight getFlightbystartairport(String startairport) throws SQLException {
+        return iFlightdao.getFlightbystartairport(startairport);
     }
 
     @Override
-    public Flight getFlightbyarrivalairport(String arrivalairport) {
-        return null;
+    public Flight getFlightbyarrivalairport(String arrivalairport) throws SQLException {
+        return iFlightdao.getFlightbyarrivalairport(arrivalairport);
     }
 
     @Override
     public void updateFlight(Flight flight) {
-
     }
 
 }
