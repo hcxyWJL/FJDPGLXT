@@ -5,6 +5,7 @@ import hcxy.bll.IFlightService;
 import hcxy.bll.impl.FlightServiceImpl;
 import hcxy.dao.IFlightdao;
 
+import java.io.File;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -74,17 +75,79 @@ public class MainUI {
             }
             else if (choice==2)
             {
-                IFlightService iFlightService =new FlightServiceImpl();
+                IFlightService iFlightService=new FlightServiceImpl();
                 try {
-                    Set<Flight> allFlights=iFlightService.getAllFlights();
-                    for(Flight flight:allFlights)
+                    Set<Flight> allflights=iFlightService.getAllFlights();
+                    for (Flight flight:allflights)
                     {
                         System.out.println(flight);
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-
+            }
+            else  if (choice==3)
+            {
+                System.out.println("输入序号选择查询方式");
+                System.out.println("按1，按起飞时间查询");
+                System.out.println("按2，按起飞地查询");
+                System.out.println("按3，按目的地查询");
+                System.out.println("按4，按空座位数");
+                int choosen=sc.nextInt();
+                if (choosen==1)
+                {
+                    System.out.print("请输入起飞时间：");
+                    String starTimes=sc.next();
+                    IFlightService iFlightService=new FlightServiceImpl();
+                    try {
+                      Flight flight=  iFlightService.getFlightbystarTime(starTimes);
+                        if (flight!=null)
+                        {
+                            System.out.println(flight);
+                        }
+                        else {
+                            System.out.println("查询不成功");
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else if (choosen==2)
+                {
+                    System.out.println("请输入起飞机场");
+                    String startair=sc.next();
+                    IFlightService iFlightService=new FlightServiceImpl();
+                    try {
+                        Flight flight= iFlightService.getFlightbystartairport(startair);
+                        if (flight!=null)
+                        {
+                            System.out.println("查询结果"+flight);
+                        }
+                        else {
+                            System.out.println("查询失败");
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else if (choosen==3)
+                {
+                    System.out.println("请输入目的机场");
+                    String ArrivalAirport=sc.next();
+                    IFlightService iFlightService=new FlightServiceImpl();
+                    try {
+                        Flight flight= iFlightService.getFlightbyarrivalairport(ArrivalAirport);
+                        if (flight!=null)
+                        {
+                            System.out.println("查询结果"+flight);
+                        }
+                        else {
+                            System.out.println("查询失败");
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
             else if (choice==6)
             {

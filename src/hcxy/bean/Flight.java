@@ -76,6 +76,15 @@ public class Flight {
         this.starTime = starTime;
     }
 
+    public Flight(String flightid, String planeType, int currentseatsnum, String startairport, String arrivalairport, String starTime) {
+        this.flightid = flightid;
+        this.planeType = planeType;
+        this.currentseatsnum = currentseatsnum;
+        this.startairport = startairport;
+        this.arrivalairport = arrivalairport;
+        this.starTime = starTime;
+    }
+
     @Override
     public String toString() {
         return "Flight{" +
